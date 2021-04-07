@@ -1,0 +1,5 @@
+INSERT INTO UsersT VALUES(1,1,'Mathen');
+INSERT INTO UsersT VALUES(2,2,'Janani');
+INSERT INTO UsersT VALUES(3,3,'Appa');
+INSERT INTO UsersT VALUES(4,4,'Amma');
+INSERT INTO UsersT VALUES(5,5,'Magi');
