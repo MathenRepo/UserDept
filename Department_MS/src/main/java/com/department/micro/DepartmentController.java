@@ -1,5 +1,7 @@
 package com.department.micro;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -50,5 +52,10 @@ public class DepartmentController {
 		Department dept = departmentService.findDeptbyID(id);
 		ResponseTemplateWrapperVO responseVO = new ResponseTemplateWrapperVO(userList, dept);
 		return responseVO;
+	}
+	
+	@RequestMapping("/all")
+	public List<Department> getAllUsers() {
+		return departmentService.retrieveAllDepartments();
 	}
 }

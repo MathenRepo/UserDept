@@ -51,4 +51,8 @@ public class UserController {
 		
 	}
 
+	@RequestMapping("/all")
+	public UsersListWrapperVO getAllUsers() {
+		return userService.retrieveAllUsers();
+	}
 }

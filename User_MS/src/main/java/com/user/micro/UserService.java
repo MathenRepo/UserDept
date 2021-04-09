@@ -44,4 +44,12 @@ public class UserService {
 		return uservoList;
 	}
 
+	public UsersListWrapperVO retrieveAllUsers() {
+		List<UserE> userList = userRepository.findAll();
+		List<UserVO> usersVo = getUserVOList(userList);
+		UsersListWrapperVO wrapperVo = new UsersListWrapperVO();
+		wrapperVo.setUserList(usersVo);
+		return wrapperVo;
+	}
+
 }
